@@ -21,6 +21,16 @@ It is a local Git pre-commit hook powered by Node.js and the Agentia Headless CL
 5. It passes these files to the Copado Agentia CLI for AI validation.
 6. The commit is either allowed or blocked based on the AI's response.
 
+## 🚀 Setup & Configuration
+To run this guardrail locally, you need to configure your Copado credentials. Create a `.env` file in the root directory and add the following variables:
+```env
+AGENTIA_AI_PAK=your_personal_access_key
+AGENTIA_AI_DOMAIN=your_copado_domain (e.g., robotic.copado.com)
+AGENTIA_AI_ORG=your_organization_id
+```
+The script will automatically parse this `.env` file and authenticate the Agentia CLI behind the scenes!
+
+
 ## 💻 Technologies Used
 * **Copado Agentia™ Headless CLI** (for AI contextual validation)
 * **Node.js** (Child Process execution)
@@ -28,4 +38,4 @@ It is a local Git pre-commit hook powered by Node.js and the Agentia Headless CL
 * **Salesforce Metadata**
 
 ## 🚦 Status
-🚧 **Work In Progress:** Currently building the core Git interception architecture. The actual Agentia CLI integration will be implemented once the Beta CLI is officially released for the hackathon on October 12, 2026.
+✅ **Completed:** The core Git interception architecture and Copado Agentia CLI integration are fully implemented and functional for the hackathon!
